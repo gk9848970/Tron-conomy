@@ -1,0 +1,95 @@
+.hero {
+    display: flow-root;
+    min-height: 100vh;
+    padding: 0 1rem;
+    background-image: url(./assets/herobg.png);
+    background-color: var(--color-blue-bg);
+    background-blend-mode: color-burn;
+    background-size: cover;
+}
+
+.features {
+    padding: 2.75rem 1rem;
+}
+
+.funds {
+    background-image: url(./assets/herobg.png);
+    background-size: cover;
+    padding: 4rem 1rem;
+    position: relative;
+}
+
+.client {
+    padding: 4rem 4rem;
+    background-image: url(./assets/clientbg.jpg);
+    background-color: var(--color-blue-bg);
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+.ranks {
+    padding: 5rem 1rem;
+    background: var(--color-sea-bg);
+}
+
+.roadmap {
+    padding: 4rem 2rem;
+    background: var(--color-blue-bg);
+}
+
+.tech {
+    padding: 3rem 0;
+}
+
+.faq {
+    padding: 6rem 2rem;
+    background: var(--color-sea-bg);
+}
+
+.ready {
+    padding: 3rem 5rem;
+    background: var(--color-blue-bg);
+}
+
+.footer {
+    background: var(--color-black-bg);
+}
+
+.copyright {
+    border-top: 1.6px solid var(--color-footer-faded);
+    padding: .5rem 2rem;
+    background: var(--color-black-bg);
+}
+
+
+@media (max-width: 680px) {
+    .faq {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 530px) {
+    .roadmap {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .ranks {
+        padding: 3rem 1rem;
+    }
+
+    .client {
+        padding: 3rem 2rem;
+    }
+
+    .funds {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .faq {
+        padding: 2.5rem 2rem;
+    }
+}

@@ -1,0 +1,10 @@
+Blue color #0133b4
+blue text #1c50c5
+log in #002a80
+how it works light seablue #c9ddfb
+invest red #dc3545
+faq bg #f3f5f9
+black text #222021
+footer border #1e2c48
+fade white text #d2e3ea
+

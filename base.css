@@ -1,0 +1,105 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+:root {
+    /* PSD Colors */
+    /* --color-blue-bg: #0133b4;
+    --color-black-bg: #051433;
+    --color-sea-bg: #f3f5f9;
+    --color-blue-login: #002a80;
+    --color-blue-text: #1c50c5;
+    --color-black-text: #222021;
+    --color-white: #ffffff;
+    --color-red: #dc3545;
+    --color-sea-blue: #c9ddfb;
+    --color-white-faded: #d2e3ea;
+    --color-footer-faded: #1e2c48; */
+
+    /* Figma Colors */
+
+    --color-blue-bg: #233dbd;
+    --color-black-bg: #051433;
+    --color-sea-bg: #eaecff;
+    --color-blue-login: #002a80;
+    --color-blue-text: #1d39e7;
+    --color-black-text: #172b4d;
+    --color-white: #f4f8fb;
+    --color-red: #dc3545;
+    --color-orange: #ff9b13;
+    --color-sea-blue: #c9ddfb;
+    --color-white-faded: #d2e3ea;
+    --color-footer-faded: #1e2c48;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(1.5rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(1.8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    70% {
+        transform: translateY(1.8rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        font-size: 90%;
+    }
+}
