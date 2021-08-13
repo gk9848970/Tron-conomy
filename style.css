@@ -28,7 +28,7 @@
 
 .nav__ul {
     display: flex;
-
+    align-items: center;
     flex-grow: 1;
 }
 
@@ -48,7 +48,9 @@
 }
 
 .nav__link--login {
-    background: var(--color-orange);   
+    padding: .5em 1em;
+    background: var(--color-orange);
+    border-radius: .25em;   
 }
 
 .nav__link--login:hover, .nav__link--login:focus {
@@ -81,7 +83,7 @@
 }
 
 .mobile__link--login {
-    width: 60%;
+    width: 40%;
 }
 
 .mobile__link--login > a {
@@ -90,7 +92,8 @@
     margin-bottom: 0;
     text-align: center;
     color: var(--color-white);
-    background: var(--color-blue-bg);
+    background: var(--color-orange);
+    border-radius: .25em;
 }
 
 .hamburger__icon {
@@ -146,10 +149,121 @@
 
 .hero__imgWrapper {
     width: 46%;
-    height: 50vh;
     border-radius: .75rem;
-    background: var(--color-white);
+    position: relative;
 }
+
+.hero__imgWrapper > img {
+    width: 100%;
+    margin-top: 2rem;
+    transform: scale(1.1);
+}
+
+.pulse {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: var(--color-orange);
+    font-size: 18px;
+    color: #fdfdfd;
+    animation: 1.6s playShadow ease-out infinite;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .pulse span {
+    margin: auto;
+    padding-left: 3px;
+  }
+  .pulse:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    transition: 0.35s;
+  }
+  .pulse:hover:after {
+    box-shadow: 0 0 0 4px rgba(255, 125, 38, 0.596), 0 0 0 8px rgba(255, 125, 38, 0.76);
+  }
+  .c {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #888;
+    z-index: 2;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  @keyframes playShadow {
+    0% {
+      box-shadow: 0 0 0 0px rgba(239, 35, 60, 0.3), 0 0 0 0px rgba(239, 35, 60, 0.2);
+      transform: scale(1);
+    }
+    18% {
+      box-shadow: 0 0 0 0px rgba(239, 35, 60, 0.3), 0 0 0 0px rgba(239, 35, 60, 0.2);
+    }
+    35% {
+      transform: scale(1.08);
+    }
+    76% {
+      transform: scale(0.96);
+    }
+    100% {
+      box-shadow: 0 0 0 16px rgba(239, 35, 60, 0), 0 0 0 27px rgba(239, 35, 60, 0);
+      transform: scale(1);
+    }
+  }
+
+  .modal {
+    position: fixed;
+    display: none;
+    inset: 0;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: all .6s ease-in;
+    z-index: 100;
+  }
+  
+  .modal.open {
+    display: grid;
+    place-items: center;
+    opacity: 1;
+  }
+  
+  .modal-close-btn {
+    padding: .1em .4em;
+    margin: 0;
+    background: white;
+    z-index: 120;
+    border: none;
+    font-size: 2.2rem;
+    border-radius: .25em;
+    position: absolute;
+    right: 1%;
+    top: 1.5%;
+    cursor: pointer;
+  }
+  
+  .videoWrapper {
+      --width: 600px;
+      width: var(--width);
+      height: calc(var(--width) * .5625);
+      position: relative;
+  }
+  .videoWrapper iframe {
+      height: 100%;
+      width: 100%;
+  }
 
 .hero__social {
     margin: 1.75rem 0;
@@ -214,9 +328,7 @@
     .hero__imgWrapper {
         width: 100%;
         max-width: 36rem;
-        height: 50vh;
         border-radius: .75rem;
-        background: var(--color-white);
     }
 
     .hero__social > p {
@@ -231,6 +343,12 @@
 @media (max-width: 750px) {
     .hero__contentWrapper > *+* {
         margin-top: 2.75rem;
+    }
+}
+
+@media (max-width: 630px) {
+    .videoWrapper {
+        --width: 94vw;
     }
 }
 
@@ -280,7 +398,10 @@
     flex-direction: column;
 
     padding: .15rem;
+    padding-bottom: 1rem;
     text-align: center;
+    border-radius: 1rem;
+    border: 2px solid rgba(82, 102, 202, 0.8);
 }
 
 .features__box > *+* {
@@ -1270,7 +1391,6 @@
     background: var(--color-white);
     border-radius: 1rem;
     max-width: 40rem;
-    height: 3.64rem;
     transition: all 150ms all;
     overflow: hidden;
     cursor: pointer;
@@ -1284,14 +1404,20 @@
     color: var(--color-black-text);
     font-size: 1.15rem;
     font-weight: 500;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
 }
 
 .faq__content {
     font-size: 1.15rem;
     line-height: 1.4;
-    transition: all 150ms ease-in-out;
+    transition: all 100ms ease-in-out;
     transform-origin: center top;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq__content.active {
+    max-height: 20rem;
 }
 
 /* ----------------------------------------------- */
@@ -1316,6 +1442,7 @@
     text-transform: uppercase;
     font-size: .9rem;
     letter-spacing: .1em;
+    border-radius: .6em;
 }
 
 @media (max-width: 480px) {
