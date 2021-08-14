@@ -369,6 +369,12 @@
         margin-left: auto;
     }
 }
+
+@media (max-width: 510px) {
+    .pulse {
+        left: 42%;
+    }
+}
     
 
 @media (max-width: 400px) {
@@ -378,6 +384,17 @@
 
     .hero__pBlock > p {
         max-width: 22ch;
+    }
+    
+    .pulse {
+        left: 40%;
+    }
+}
+
+
+@media (max-width: 370px) {
+    .pulse {
+        left: 38%;
     }
 }
 
