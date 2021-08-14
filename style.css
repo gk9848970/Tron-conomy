@@ -405,7 +405,14 @@
 .features__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 70rem;
+    margin: 0 auto;
     gap: 1rem;
+}
+
+.features__wrapper > * {
+    width: 100%;
+    max-width: 15rem;
 }
 
 .features__box {
@@ -464,6 +471,7 @@
 @media (max-width: 800px) {
     .features__wrapper {
         grid-template-columns: 1fr 1fr;
+        max-width: 32rem;
     }
 }
 
@@ -471,6 +479,7 @@
     .features__wrapper {
         padding: 0 2rem;
         grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
 
