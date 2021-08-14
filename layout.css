@@ -1,7 +1,7 @@
 .hero {
     display: flow-root;
-    min-height: 100vh;
     padding: 0 1rem;
+    padding-bottom: 1rem;
     background-image: url(./assets/herobg.png);
     background-color: var(--color-blue-bg);
     background-blend-mode: color-burn;
