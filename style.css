@@ -148,7 +148,7 @@
 }
 
 .hero__imgWrapper {
-    width: 54%;
+    width: 46%;
     border-radius: .75rem;
     position: relative;
     display: grid;
@@ -330,7 +330,7 @@
 
     .hero__imgWrapper {
         width: 100%;
-        max-width: 42rem;
+        max-width: 36rem;
         border-radius: .75rem;
     }
 
