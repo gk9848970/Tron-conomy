@@ -781,7 +781,8 @@
         width: 40vw;
         min-width: 20rem;
         display: grid;
-        place-items: center;
+        align-content: center;
+        text-align: left;
         padding: 1rem 2rem;
     }
     
@@ -793,7 +794,6 @@
     .steps__li--2::before {
         content: 'Download TRX Wallet for Desktop and Mobile';
         top: 0;
-        padding: 1rem 3.75rem;
         line-height: 1.4;
     }
     
@@ -857,11 +857,15 @@
         margin-left: 0;
         margin-top: 2rem;
     }
+
+    .steps__ul {
+        padding-left: 4rem;
+    }
 }
 
 @media (max-width: 610px) {
     .steps__ul {
-        padding: 0 3rem;
+        padding-left: 2rem;
     }
 }
 
@@ -912,13 +916,15 @@
 
 @media (max-width: 390px) {
     .steps__ul {
-        padding: 0 1rem;
+        padding-left: 0rem;
     }
 
     .steps__li::before {
         left: 10vw;
         z-index: -1;
         transform: translateX(0);
+        padding: .5rem 2rem;
+        padding-left: 4rem;
     }
     
     .steps__li--1::before {
@@ -943,7 +949,6 @@
         content: 'Make a Deposit';
         width: 18rem;
         height: 4.70rem;
-        padding: 1rem 3.75rem;
         top: 0;
     }
     
@@ -966,9 +971,6 @@
 }
 
 @media (max-width: 380px) {
-    .steps__li::before {
-        padding: .5rem 2rem;
-    }
 }
 
 @media (max-width: 370px) {
