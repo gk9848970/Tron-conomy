@@ -62,7 +62,7 @@
     margin: 0;
     position: absolute;
     background: var(--color-white);
-    top: 100%;
+    top: 134%;
     left: -1rem;
     width: 100vw;
     padding: 1rem 2rem;
@@ -305,7 +305,8 @@
 
 @media (max-width: 880px) {
     .nav {
-        padding: 1rem 0rem;
+        padding: 1.5rem 0rem;
+        padding-bottom: 0;
     }
 
     .hero__contentWrapper {
