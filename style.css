@@ -634,11 +634,9 @@
     display: flex;
 
     background: var(--color-white);
-    margin-block-start: 3rem;
-    margin-block-end: 5rem;
+    margin: 3rem auto 5rem auto;
     padding: 2.75rem 2rem;
     max-width: 60rem;
-    margin-inline: auto;
     border-radius: .5rem;
     box-shadow: 0 6px 10px 0 rgb(207, 207, 207);
 }
