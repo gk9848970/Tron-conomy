@@ -989,7 +989,7 @@
 .client__mainBox {
     text-align: center;
     max-width: 65rem;
-    margin-inline: auto;
+    margin: 0 auto;
 }
 
 .client__mainBox > h2 {
@@ -1411,7 +1411,7 @@
 .tech__img--big {
     width: 7.25rem;
     height: 2rem;
-    margin-inline: 1rem;
+    margin: 0 1rem;
 }
 
 /* ----------------------------------------------- */
